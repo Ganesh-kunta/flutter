@@ -1,0 +1,34 @@
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Second(),
+              ),
+            );
+          },
+          child: Text("Go to Second Screen"),
+        ),
+      ),
+    );
+  }
+}
+
+class Second extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: Text("Second Screen")),
+    );
+  }
+}
