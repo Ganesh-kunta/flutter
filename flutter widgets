@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+
+void main() { runApp(MaterialApp(
+  home: Scaffold(
+    appBar: AppBar(title: Text("Widgets")),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Hello Flutter",
+              style: TextStyle(fontSize: 24)),
+          Container(
+            padding: EdgeInsets.all(15),
+            color: Colors.blue,
+            child: Text("Container Widget",
+                style: TextStyle(color: Colors.white)),
+          ),
+          Image.network(
+            "https://picsum.photos/100",
+            width: 100,
+            height: 100,
+          ),
+        ],
+      ),
+    ),
+  ),
+));
+}
