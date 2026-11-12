@@ -1,0 +1,23 @@
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  home: Scaffold(
+    body: Center(
+      child: Builder(
+        builder: (context) {
+          double width = MediaQuery.of(context).size.width;
+
+          return Text(
+            width < 600
+                ? "Mobile"
+                : width < 900
+                    ? "Tablet"
+                    : "Desktop",
+            style: TextStyle(fontSize: 25),
+          );
+        },
+      ),
+    ),
+  ),
+));
