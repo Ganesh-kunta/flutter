@@ -1,0 +1,42 @@
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  home: Scaffold(
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Stateless Widget"),
+          MyCounter(),
+        ],
+      ),
+    ),
+  ),
+));
+
+class MyCounter extends StatefulWidget {
+  @override
+  State<MyCounter> createState() => CounterState();
+}
+
+class CounterState extends State<MyCounter> {
+  int count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text("Count: $count"),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              count++;
+            });
+          },
+          child: Text("Increase"),
+        ),
+      ],
+    );
+  }
+}
