@@ -1,14 +1,13 @@
-
 void main() {
-  String name = "Ganesh";
-  int age = 20;
+  List<int> numbers = [12, 45, 68, 239, 100, 200, 300];
 
-  print("Hello $name");
-  print("Age: $age");
-  print("Welcome to Dart");
+  for (int num in numbers) {
+    if (num > 237) {
+      break;
+    }
 
-  int a = 10;
-  int b = 20;
-  int sum = a+b;
-  print("Sum = $sum");
+    if (num % 2 == 0) {
+      print(num);
+    }
+  }
 }
