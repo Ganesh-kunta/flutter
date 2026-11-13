@@ -1,0 +1,14 @@
+
+void main() {
+  String name = "Ganesh";
+  int age = 20;
+
+  print("Hello $name");
+  print("Age: $age");
+  print("Welcome to Dart");
+
+  int a = 10;
+  int b = 20;
+  int sum = a+b;
+  print("Sum = $sum");
+}
